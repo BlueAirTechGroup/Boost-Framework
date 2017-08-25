@@ -567,6 +567,7 @@ pre.codearea{
 	background-color:#fff;
 	border-radius:4px;
 	text-align:center;
+	text-decoration:none;
 }
 @media (max-width:768px){
 	.btn-phone-full{

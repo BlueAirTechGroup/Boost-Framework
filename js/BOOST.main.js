@@ -91,7 +91,7 @@ function(e){
 	var ScreenWidth = parseInt(GetWindowWidth());
 	var ScreenHeight = parseInt(GetWindowHeight());
 	if(loadingWrapperDeleted==false){
-		$("body").append('<div id="loadingWrapper" class="cover bg-white" style="position:fixed;top:0px;left:0px;width:100vw;height:100vw;z-index:9999;display:table;vertical-align:middle;"><div class="inner" style="display:table-cell"><!-- [if gt IE 8]><p align="center"><div class="boost-animate-spinner"></div></p><p align="center">Powered by Boost Framework</p><![endif]--><!--[if lt IE 9]><p>当前网页<b>不支持</b>您正在使用的浏览器. 为了正常的访问,请升级您的浏览器</p><p>Sorry, this page does not support your current browser, to change this situation, you will need to update your browser</p><![endif]--></div></div>')
+		$("body").append('<div id="loadingWrapper" class="cover bg-white" style="position:fixed;top:0px;left:0px;width:100vw;height:100vw;z-index:9999;display:table;vertical-align:middle;"><div class="inner" style="display:table-cell"><!-- [if gt IE 8]><p align="center"><div class="boost-animate-spinner"></div></p><p align="center">Powered by Boost Framework</p><![endif]--><!--[if lt IE 9]><p>当前网页<b>不支持</b>您正在使用的浏览器. 为了正常的访问,请升级您的浏览器</p><p>Sorry, this page does not support your current browser, to change this situation, you will need to update your browser</p><![endif]--></div></div>');
 	}
 	if(ScreenWidth<1201){
 		//Phone or tablet
@@ -141,6 +141,6 @@ if(browser.ie9below === true){
 		//不符合浏览器要求(因为不支持该版本Jquery)
 		//提示, 你需要更换GFW出卖引擎
 		document.write(
-			'<div class="cover bg-white" style="width:100%;height:100%;width:100vw;height:100vh;position:fixed;top:0px;left:0px;text-align:center;z-index:9999;"><h1>对不起, 您的浏览器不支持此网页</h1><p>Sorry, your browser does not support this page</p><p>Powered by Boost Framework</p></div>';
-		)
+			'<div class="cover bg-white" style="width:100%;height:100%;width:100vw;height:100vh;position:fixed;top:0px;left:0px;text-align:center;z-index:9999;"><h1>对不起, 您的浏览器不支持此网页</h1><p>Sorry, your browser does not support this page</p><p>Powered by Boost Framework</p></div>'
+		);
 }
