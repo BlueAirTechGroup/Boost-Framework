@@ -1,3 +1,6 @@
+ï»¿/* BOOST Framework 1.0 Main JS FILE - If you want to change, please refer to the GPL open-source lisence
+ * Powered by BlueAirTechGroup(www.xsyds.cn)
+ */
 var loadingWrapperDeleted;
 loadingWrapperDeleted=false;
 
@@ -91,7 +94,7 @@ function(e){
 	var ScreenWidth = parseInt(GetWindowWidth());
 	var ScreenHeight = parseInt(GetWindowHeight());
 	if(loadingWrapperDeleted==false){
-		$("body").append('<div id="loadingWrapper" class="cover bg-white" style="position:fixed;top:0px;left:0px;width:100vw;height:100vw;z-index:9999;display:table;vertical-align:middle;"><div class="inner" style="display:table-cell"><!-- [if gt IE 8]><p align="center"><div class="boost-animate-spinner"></div></p><p align="center">Powered by Boost Framework</p><![endif]--><!--[if lt IE 9]><p>µ±Ç°ÍøÒ³<b>²»Ö§³Ö</b>ÄúÕıÔÚÊ¹ÓÃµÄä¯ÀÀÆ÷. ÎªÁËÕı³£µÄ·ÃÎÊ,ÇëÉı¼¶ÄúµÄä¯ÀÀÆ÷</p><p>Sorry, this page does not support your current browser, to change this situation, you will need to update your browser</p><![endif]--></div></div>');
+		$("body").append('<div id="LoadingWrapper" class="cover bg-white" style="background:#FFFFFF;color:#000000;position:fixed;top:0px;left:0px;width:100vw;height:100vh;z-index:9999;display:table;vertical-align:middle;"><div class="inner" style="display:table-cell"><p align="center"><div class="boost-animate-spinner"></div></p><p align="center">Powered by Boost Framework</p><!--[if lt IE 9]><p>µ±Ç°ÍøÒ³<b>²»Ö§³Ö</b>ÄúÕıÔÚÊ¹ÓÃµÄä¯ÀÀÆ÷. ÎªÁËÕı³£µÄ·ÃÎÊ,ÇëÉı¼¶ÄúµÄä¯ÀÀÆ÷</p><p>Sorry, this page does not support your current browser, to change this situation, you will need to update your browser</p><![endif]--></div></div>');
 	}
 	if(ScreenWidth<1201){
 		//Phone or tablet
