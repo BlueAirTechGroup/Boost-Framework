@@ -15,19 +15,13 @@ document.onreadystatechange = completeLoading;
     var agent = navigator.userAgent.toLowerCase(),  
     opera = window.opera,  
     browser = {  
-        //¼ì²âµ±Ç°ä¯ÀÀÆ÷ÊÇ·ñÎªIE  
         ie: /(msie\s|trident.*rv:)([\w.]+)/.test(agent), 
  
-        //¼ì²âµ±Ç°ä¯ÀÀÆ÷ÊÇ·ñÎªOpera  
-        opera: (!!opera && opera.version), 
-        //¼ì²âµ±Ç°ä¯ÀÀÆ÷ÊÇ·ñÊÇwebkitÄÚºËµÄä¯ÀÀÆ÷  
+        opera: (!!opera && opera.version),  
         webkit: (agent.indexOf(' applewebkit/') > -1), 
-        //¼ì²âµ±Ç°ä¯ÀÀÆ÷ÊÇ·ñÊÇÔËĞĞÔÚmacÆ½Ì¨ÏÂ  
         mac: (agent.indexOf('macintosh') > -1), 
-        //¼ì²âµ±Ç°ä¯ÀÀÆ÷ÊÇ·ñ´¦ÓÚ¡°¹ÖÒìÄ£Ê½¡±ÏÂ  
         quirks: (document.compatMode == 'BackCompat')  
     }; 
-    //¼ì²âµ±Ç°ä¯ÀÀÆ÷ÄÚºËÊÇ·ñÊÇgeckoÄÚºË  
     browser.gecko = (navigator.product == 'Gecko' && !browser.webkit && !browser.opera && !browser.ie); 
     var version = 0; 
     // Internet Explorer 6.0+  
@@ -43,19 +37,12 @@ document.onreadystatechange = completeLoading;
         } else {  
             version = 0;  
         } 
-        //¼ì²âä¯ÀÀÆ÷Ä£Ê½ÊÇ·ñÎª IE11 ¼æÈİÄ£Ê½  
         browser.ie11Compat = document.documentMode == 11; 
-        //¼ì²âä¯ÀÀÆ÷Ä£Ê½ÊÇ·ñÎª IE9 ¼æÈİÄ£Ê½  
         browser.ie9Compat = document.documentMode == 9; 
-        //¼ì²âä¯ÀÀÆ÷Ä£Ê½ÊÇ·ñÎª IE10 ¼æÈİÄ£Ê½  
-        browser.ie10Compat = document.documentMode == 10; 
-        //¼ì²âä¯ÀÀÆ÷ÊÇ·ñÊÇIE8ä¯ÀÀÆ÷  
+        browser.ie10Compat = document.documentMode == 10;  
         browser.ie8 = !!document.documentMode; 
-        //¼ì²âä¯ÀÀÆ÷Ä£Ê½ÊÇ·ñÎª IE8 ¼æÈİÄ£Ê½  
         browser.ie8Compat = document.documentMode == 8; 
-        //¼ì²âä¯ÀÀÆ÷Ä£Ê½ÊÇ·ñÎª IE7 ¼æÈİÄ£Ê½  
         browser.ie7Compat = ((version == 7 && !document.documentMode) || document.documentMode == 7); 
-        //¼ì²âä¯ÀÀÆ÷Ä£Ê½ÊÇ·ñÎª IE6 Ä£Ê½ »òÕß¹ÖÒìÄ£Ê½  
         browser.ie6Compat = (version < 7 || browser.quirks); 
         browser.ie9above = version > 8; 
         browser.ie9below = version < 9;  
@@ -68,11 +55,9 @@ document.onreadystatechange = completeLoading;
             version = geckoRelease[0] * 10000 + (geckoRelease[1] || 0) * 100 + (geckoRelease[2] || 0) * 1;  
         }  
     } 
-    //¼ì²âµ±Ç°ä¯ÀÀÆ÷ÊÇ·ñÎªChrome, Èç¹ûÊÇ£¬Ôò·µ»ØChromeµÄ´ó°æ±¾ºÅ  
     if (/chrome\/(\d+\.\d)/i.test(agent)) {  
         browser.chrome = +RegExp['\x241'];  
-    } 
-    //¼ì²âµ±Ç°ä¯ÀÀÆ÷ÊÇ·ñÎªSafari, Èç¹ûÊÇ£¬Ôò·µ»ØSafariµÄ´ó°æ±¾ºÅ  
+    }  
     if (/(\d+\.\d)?(?:\.\d)?\s+safari\/?(\d+\.\d+)?/i.test(agent) && !/chrome/i.test(agent)) {  
         browser.safari = +(RegExp['\x241'] || RegExp['\x242']);
     } 
@@ -83,8 +68,7 @@ document.onreadystatechange = completeLoading;
     // WebKit 522+ (Safari 3+)  
     if (browser.webkit){
         version = parseFloat(agent.match(/ applewebkit\/(\d+)/)[1]); 
-	}
-    //¼ì²âµ±Ç°ä¯ÀÀÆ÷°æ±¾ºÅ  
+	} 
     browser.version = version; 
     return browser;  
 }();
@@ -94,7 +78,7 @@ function(e){
 	var ScreenWidth = parseInt(GetWindowWidth());
 	var ScreenHeight = parseInt(GetWindowHeight());
 	if(loadingWrapperDeleted==false){
-		$("body").append('<div id="LoadingWrapper" class="cover bg-white" style="background:#FFFFFF;color:#000000;position:fixed;top:0px;left:0px;width:100vw;height:100vh;z-index:9999;display:table;vertical-align:middle;"><div class="inner" style="display:table-cell"><p align="center"><div class="boost-animate-spinner"></div></p><p align="center">Powered by Boost Framework</p><!--[if lt IE 9]><p>µ±Ç°ÍøÒ³<b>²»Ö§³Ö</b>ÄúÕıÔÚÊ¹ÓÃµÄä¯ÀÀÆ÷. ÎªÁËÕı³£µÄ·ÃÎÊ,ÇëÉı¼¶ÄúµÄä¯ÀÀÆ÷</p><p>Sorry, this page does not support your current browser, to change this situation, you will need to update your browser</p><![endif]--></div></div>');
+		$("body").append('<div id="LoadingWrapper" class="cover bg-white" style="background:#FFFFFF;color:#000000;position:fixed;top:0px;left:0px;width:100vw;height:100vh;z-index:9999;display:table;vertical-align:middle;"><div class="inner" style="display:table-cell"><p align="center"><div class="boost-animate-spinner"></div></p><p align="center">Powered by Boost Framework</p><!--[if lt IE 9]><p>å¯¹ä¸èµ·,æœ¬ç½‘é¡µ<b>ä¸æ”¯æŒ</b>æ‚¨çš„æµè§ˆå™¨, è¯·å‡çº§æ‚¨çš„æµè§ˆå™¨.</p><p>Sorry, this page does not support your current browser, to change this situation, you will need to update your browser</p><![endif]--></div></div>');
 	}
 	if(ScreenWidth<1201){
 		//Phone or tablet
@@ -134,16 +118,16 @@ function GetWindowHeight(){
 function completeLoading(){
 	if(document.readyState == "complete"){
 		loadingWrapperDeleted=true;
-		//×ö°®×öµÄÊÂ
+		//åšçˆ±åšçš„äº‹
 		$("#LoadingWrapper").hide();
 		$("#LoadingWrapper").remove();
 	}
 }
 
 if(browser.ie9below === true){
-		//²»·ûºÏä¯ÀÀÆ÷ÒªÇó(ÒòÎª²»Ö§³Ö¸Ã°æ±¾Jquery)
-		//ÌáÊ¾, ÄãĞèÒª¸ü»»GFW³öÂôÒıÇæ
+		//å½“å‰Jqueryç‰ˆæœ¬ä¸æ”¯æŒ, éƒ¨åˆ†åŠŸèƒ½æ— æ³•ä½¿ç”¨
+		//æç¤ºæ›´æ–°æµè§ˆå™¨
 		document.write(
-			'<div class="cover bg-white" style="width:100%;height:100%;width:100vw;height:100vh;position:fixed;top:0px;left:0px;text-align:center;z-index:9999;"><h1>¶Ô²»Æğ, ÄúµÄä¯ÀÀÆ÷²»Ö§³Ö´ËÍøÒ³</h1><p>Sorry, your browser does not support this page</p><p>Powered by Boost Framework</p></div>'
+			'<div class="cover bg-white" style="width:100%;height:100%;width:100vw;height:100vh;position:fixed;top:0px;left:0px;text-align:center;z-index:9999;"><h1>å¯¹ä¸èµ·, æœ¬ç½‘é¡µä¸æ”¯æŒæ‚¨çš„æµè§ˆå™¨</h1><p>Sorry, your browser does not support this page</p><p>Powered by Boost Framework</p></div>'
 		);
 }
