@@ -119,6 +119,12 @@ a.text-warning:hover,a.text-warning:focus {
 a.text-danger:hover,a.text-danger:focus {
   color: #843534;
 }
+.without-margin{
+	margin:0 !important;
+}
+.without-padding{
+	padding:0 !important;
+}
 .bg-white{
 	color:#000000;
 	background-color: #FFFFFF;
@@ -157,6 +163,12 @@ a.bg-warning:hover,a.bg-warning:focus{
 }
 a.bg-danger:hover,a.bg-danger:focus{
   background-color: #e4b9b9;
+}
+.text-black{
+	color:#000000;
+}
+.text-white{
+	color:#FFFFFF;
 }
 .float-center{
 	margin-left:auto;
@@ -274,13 +286,24 @@ img.circle{
 	height:100vh;
 	vertical-align:middle;
 	vertical-align:central;
+	padding:auto;
+}
+.cover .coverbackgrounddiv{
+	position:absolute;
+	height:100vh;
+	width:100%;
+	margin:0;
 }
 .cover .inner{
 	display:table-cell;
-	margin-left:auto;
-	margin-right:auto;
+	margin:auto;
 	text-align:center;
 	vertical-align:middle;
+	position:relative;
+	z-index:2;
+	height:auto;
+	width:auto;
+	padding:0;
 }
 .cover .inner-top{
 	display:table-cell;
@@ -784,6 +807,7 @@ nav.navbar-fixed-top{
 	position:fixed;
 	top:0px;
 	left:0px;
+	z-index:9999;
 }
 nav .navbar-brand{
 	display:inline-block;
