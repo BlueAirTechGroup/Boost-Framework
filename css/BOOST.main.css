@@ -11,6 +11,9 @@
 	font-size:14px;
 	line-height:1.428;
 }
+body .has-navbar-top{
+	padding-top:50px;
+}
 h1{
 	font-size:36px;
 }

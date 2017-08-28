@@ -121,6 +121,7 @@ function completeLoading(){
 		//做爱做的事
 		$("#LoadingWrapper").hide();
 		$("#LoadingWrapper").remove();
+		$("body").addClass("boost-animate-completeloading");
 	}
 }
 
