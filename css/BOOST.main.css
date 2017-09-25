@@ -11,7 +11,7 @@
 	font-size:14px;
 	line-height:1.428;
 }
-body .has-navbar-top{
+body.has-navbar-top{
 	padding-top:50px;
 }
 h1{
@@ -333,14 +333,22 @@ img.circle{
 .row{
 	width:100%;
 	display:block;
+	font-size:0px;
 	padding:0;
 	margin:0;
+}
+.col.col-as-base .row{
+	font-size:14px;
+	vertical-align:middle;
 }
 .col{
 	width:100%;
 	display:block;
-	font-size:14px;
+	font-size:0px;
 	vertical-align:top;
+}
+.row.row-as-base .col{
+	font-size:14px;
 }
 @media (min-width:350px){
 	/* phone */
@@ -545,9 +553,6 @@ img.circle{
 		display:inline-block;
 		width:100%;
 	}
-}
-.row{
-	font-size:0px;
 }
 /* ==========CodeBlocks========== */
 kbd{
@@ -770,23 +775,32 @@ pre.codearea{
 		<navicon></navicon>
 		<div class="navbar-brand"><b>形随意动</b></div>
 		<div class="navbar-links">
-			<a class="navbar-link navbar-link-current"></a>
-			<a class="navbar-link"></a>
-			<a class="navbar-link "></a>
+			<div class="navbar-link navbar-link-current"><a href="#">A</a></div>
+			<div class="navbar-link"><a href="#">B</a></div>
 		</div>
 		<div class="navbar-links navbar-links-right">
-			<a class="navbar-link"></a>
+			<div class="navbar-link"><a href="#">C</a></div>
 		</div>
 	</div>
 </nav>
 */
-
+@keyframes navwidthexpand{
+	from { 
+		width:0;
+	} to {
+		width:100%;
+	}
+}
 nav{
 	width:100%;
 	padding:0;
 	margin:0;
 	background:#FFFFFF;
 	font-size:21px;
+	color:#000000;
+}
+nav a{
+	color:#000000;
 }
 nav.container{
 	padding:0;
@@ -850,13 +864,43 @@ nav .navbar-link{
 	margin:0;
 	text-align:center;
 }
+nav .navbar-link a{
+	display:block;
+	height:50px;
+	line-height:50px;
+	margin:0;
+	padding:0;
+	text-decoration:none;
+}
 
 nav .navbar-link.navbar-link-current{
 	font-weight:500;
-	background:#f9f9f9;
+	background:#D1D1D1;
 }
 nav .navbar-link:hover{
-	background:#f9f9f9;
+	background:#DFDFDF;
+}
+nav.navbar-black{
+	background:#000000;
+	color:#FFFFFF;
+}
+nav.navbar-black a{
+	color:#FFFFFF;
+}
+nav.navbar-black .navbar-link{
+	background:#000000;
+}
+nav.navbar-black .navbar-link.navbar-link-current{
+	background:#4D4D4D;
+}
+nav.navbar-black .navbar-link:hover{
+	background:#5D5D5D;
+}
+.navbar-hasbottomborder{
+	
+}
+.bottomborder-black{
+	
 }
 @media (max-width:1200px){
 	nav .navbar-links{
@@ -871,5 +915,46 @@ nav .navbar-link:hover{
 		width:100%;
 		display:block;
 		line-height:1;
+	}
+}
+@media (min-width:1201px){
+	nav.navbar-hasbottomborder .navbar-brand{
+		height:55px;
+		line-height:55px;
+	}
+	nav.navbar-hasbottomborder .navbar-links{
+		height:55px;
+	}
+	nav.navbar-hasbottomborder .navbar-link{
+		height:55px;
+	}
+	nav.navbar-hasbottomborder .navbar-link.navbar-link-current a::after{
+		content:"";
+		display:block;
+		height:5px;
+		width:100%;
+		background:#1796E7;
+	}
+	nav.navbar-hasbottomborder .navbar-link a::after{
+		content:"";
+		display:block;
+		height:5px;
+		width:0;
+		background:#1796E7;
+	}
+	nav.navbar-hasbottomborder .navbar-link a:hover::after{
+		animation-name: navwidthexpand;
+		animation-duration: 1s;
+		animation-iteration-count: 1; /*infinite */
+		animation-direction: alternate; /* reverse */
+		animation-timing-function: ease;
+		-webkit-animation: navwidthexpand 1s ease 1;
+		width:100%;
+	}
+	nav.bottomborder-black .navbar-link.navbar-link-current a::after{
+		background:#000000;
+	}
+	nav.bottomborder-black .navbar-link a::after{
+		background:#000000;
 	}
 }
