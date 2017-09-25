@@ -337,9 +337,11 @@ img.circle{
 	padding:0;
 	margin:0;
 }
-.col.col-as-base .row{
+.row-as-base{
+	
+}
+.row.row-as-base .col{
 	font-size:14px;
-	vertical-align:middle;
 }
 .col{
 	width:100%;
@@ -347,9 +349,14 @@ img.circle{
 	font-size:0px;
 	vertical-align:top;
 }
-.row.row-as-base .col{
-	font-size:14px;
+.col-as-base{
+	
 }
+.col.col-as-base .row{
+	font-size:14px;
+	vertical-align:middle;
+}
+
 @media (min-width:350px){
 	/* phone */
 	.col-phone-1{
