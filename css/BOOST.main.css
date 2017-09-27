@@ -11,6 +11,13 @@
 	font-size:14px;
 	line-height:1.428;
 }
+a{
+	text-decoration:none;
+	color:#000000;
+}
+a:hover{
+	text-decoration:underline;
+}
 body.has-navbar-top{
 	padding-top:50px;
 }
@@ -336,6 +343,8 @@ img.circle{
 	font-size:0px;
 	padding:0;
 	margin:0;
+	line-height:1;
+	margin:0;
 }
 .row-as-base{
 	
@@ -348,17 +357,37 @@ img.circle{
 	display:block;
 	font-size:0px;
 	vertical-align:top;
+	line-height:1.2;
+	margin:0;
 }
 .col-as-base{
-	
+	width:auto;
+	height:100%;
+}
+body .col-as-base{
+	height:100vh;
 }
 .col.col-as-base .row{
 	display:inline-block;
 	font-size:14px;
 	vertical-align:middle;
-	height:100%;
 }
-
+.col.col-as-base .row.row-menu{
+	display:block;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:5px;
+	padding-right:5px;
+	height:auto;
+	width:auto;
+	border-radius:2px;
+	text-align:center;
+}
+.col p, .row p{
+	line-height:1.2;
+	margin:0;
+	padding:0;
+}
 @media (min-width:350px){
 	/* phone */
 	.col-phone-1{
@@ -1118,7 +1147,7 @@ nav.navbar-black .navbar-link:hover{
 		height:auto;
 		padding-top:5px;
 		padding-bottom:5px;
-		width:100%;
+		width:auto;
 		display:block;
 		line-height:1;
 	}
