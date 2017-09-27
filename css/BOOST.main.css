@@ -1,4 +1,4 @@
-﻿/* BOOST Framework 1.0 MAIN CSS FILE - If you want to change, please refer to the GPL open-source lisence
+﻿/* BOOST Framework 1.0 MAIN CSS FILE - If you want to change, please refer to the MIT open-source lisence
  * Powered by BlueAirTechGroup(www.xsyds.cn)
  */
  @charset "utf-8";
@@ -779,12 +779,15 @@ pre.codearea{
     margin: 0 0 10px;
     font-size: 13px;
     line-height: 1.42857143;
-    color: #333;
+    /* color: #333; */
+	color:#FFFFFF;
     word-break: break-all;
     word-wrap: break-word;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+	background:#000000;
     border: 1px solid #ccc;
     border-radius: 4px;
+	max-height:360px;
 }
 /* ==========Buttons========== */
 .btn{
