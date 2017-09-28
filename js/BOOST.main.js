@@ -86,7 +86,7 @@ function(e){
 	}
 	$("navicon").click(
 	function(e){
-		var MyContainer = $(e.target).parent(".container");
+		var MyContainer = $(this).parent(".container");
 		var MyLinks = MyContainer.children(".navbar-links");
 		if($(this).hasClass("navicon-rotate")){
 			$(this).addClass("navicon-revrotate");
