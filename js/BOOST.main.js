@@ -88,6 +88,13 @@ function(e){
 	function(e){
 		var MyContainer = $(e.target).parent(".container");
 		var MyLinks = MyContainer.children(".navbar-links");
+		if($(this).hasClass("navicon-rotate")){
+			$(this).addClass("navicon-revrotate");
+			$(this).removeClass("navicon-rotate");
+		}else{
+			$(this).removeClass("navicon-revrotate");
+			$(this).addClass("navicon-rotate");
+		}
 		MyLinks.toggle();
 	}
 	);
@@ -101,6 +108,8 @@ function(e){
 	if(ScreenWidth<1201){
 		//Phone or tablet
 		$(".navbar-links").hide();
+		$("navicon").removeClass("navicon-revrotate");
+		$("navicon").removeClass("navicon-rotate");
 	}else{
 		$(".navbar-links").show();
 	}
