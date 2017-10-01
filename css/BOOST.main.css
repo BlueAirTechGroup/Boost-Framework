@@ -328,6 +328,7 @@ img.circle{
 	margin-right:auto;
 	text-align:center;
 	vertical-align:top;
+	height:auto;
 }
 .cover .inner-bottom{
 	display:table-cell;
@@ -336,6 +337,7 @@ img.circle{
 	margin-right:auto;
 	text-align:center;
 	vertical-align:bottom;
+	height:auto;
 }
 .row{
 	width:100%;
