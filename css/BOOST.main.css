@@ -231,7 +231,7 @@ a.bg-danger:hover,a.bg-danger:focus{
 		display:none !important;
 	}
 }
-@media(min-width:1201px){
+@media(min-width:1201px) and (max-width:1800px){
 	.invisible-comp{
 		display:none !important;
 	}
@@ -284,7 +284,7 @@ textarea:hover{
 		width:98%;
 	}
 }
-@media (min-width:768px){
+@media (min-width : 1220px ){
 	/* 平板 tablet */
 	.container{
 		width:95%;
@@ -544,7 +544,7 @@ body .col-as-base{
 		height:100%;
 	}
 }
-@media (min-width:768px){
+@media (min-width : 1220px ){
 	/* tablet */
 	.col-tablet-1{
 		display:inline-block;
