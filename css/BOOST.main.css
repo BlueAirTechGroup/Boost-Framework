@@ -17,6 +17,10 @@ a{
 }
 a:hover{
 	text-decoration:underline;
+	color:#000000;
+}
+a:active{
+	color:#000000;
 }
 body.has-navbar-top{
 	padding-top:50px;
@@ -284,7 +288,7 @@ textarea:hover{
 		width:98%;
 	}
 }
-@media (min-width : 1220px ){
+@media (min-width : 768px ){
 	/* 平板 tablet */
 	.container{
 		width:95%;
@@ -544,7 +548,7 @@ body .col-as-base{
 		height:100%;
 	}
 }
-@media (min-width : 1220px ){
+@media (min-width : 768px ){
 	/* tablet */
 	.col-tablet-1{
 		display:inline-block;
