@@ -197,9 +197,12 @@ a.bg-danger:hover,a.bg-danger:focus{
 }
 /* Flexible Visibility */
 @media (min-width:0px) and (max-width:349px){
-	.visible-phone{
+	.invisible-phone{
 		display:none !important;
 	}
+	/* .visible-phone{
+		display:none !important;
+	} */
 	.visible-tablet{
 		display:none !important;
 	}
