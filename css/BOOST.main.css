@@ -259,6 +259,7 @@ input[type=text], input[type=password], input[type=email]{
 	background:#FFFFFF;
 	width:240px;
 	height:30px;
+	vertical-align:top;
 }
 input[type=text]:hover, input[type=password]:hover, input[type=email]:hover{
 	border:2px #7A7A7A solid;
@@ -902,6 +903,7 @@ pre.codearea{
 	border-radius:4px;
 	text-align:center;
 	text-decoration:none;
+	vertical-align:top;
 }
 .btn-phone-full{
 	
