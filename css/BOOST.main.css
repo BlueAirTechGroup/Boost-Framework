@@ -293,6 +293,60 @@ a.bg-danger:hover,a.bg-danger:focus{
 	}
 }
 /* Flexible Vsibility Ends */
+/* Flexible Display Starts */
+@media (min-width:0px) and (max-width:349px){
+	.display-normal-phone{
+		display:block !important;
+	}
+	.display-normal-tablet{
+		display:block !important;
+	}
+	.display-normal-comp{
+		display:block !important;
+	}
+	.display-normal-bigcomp{
+		display:block !important;
+	}
+}
+@media (min-width:350px) and (max-width:767px){
+	.display-block-phone{
+		display:block !important;
+	}
+	.display-normal-tablet{
+		display:block !important;
+	}
+	.display-normal-comp{
+		display:block !important;
+	}
+	.display-normal-bigcomp{
+		display:block !important;
+	}
+}
+@media(min-width:768px) and (max-width:1200px){
+	.display-block-tablet{
+		display:block !important;
+	}
+	.display-normal-comp{
+		display:block !important;
+	}
+	.display-normal-bigcomp{
+		display:block !important;
+	}
+}
+@media(min-width:1201px) and (max-width:1800px){
+	.display-block-comp{
+		display:block !important;
+	}
+	.display-normal-bigcomp{
+		display:block !important;
+	}
+}
+@media(min-width:1801px){
+	.display-block-bigcomp{
+		display:block !important;
+	}
+}
+/* Flexible Display Ends */
 
 input[type=text], input[type=password], input[type=email]{
 	border:2px #000000 solid;
