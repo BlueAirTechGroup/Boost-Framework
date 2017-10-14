@@ -236,6 +236,9 @@ a.bg-danger:hover,a.bg-danger:focus{
 .float-right{
 	float:right !important;
 }
+.clear,.after-float,.clear-after-float{
+	clear:both
+}
 /* Flexible Visibility */
 @media (min-width:0px) and (max-width:349px){
 	.invisible-phone{
