@@ -4,7 +4,7 @@
  @charset "utf-8";
  /* ==========Global Setting========== */
  body{
-	font-family:'Segoe UI','Microsoft Yahei','Malgun Gothic','Meiryo UI','San Fransisco','Helvetica',"PingFang";
+	font-family:'Segoe UI','Microsoft Yahei','Malgun Gothic','Meiryo UI','San Fransisco','Helvetica',"PingFang", 'sans-serif';
 	margin:0;
 	padding:0;
 	word-break:break-all;
@@ -100,38 +100,47 @@ i,em,italic{
 .text-capitalize{
 	text-transform:capitalize !important;
 }
-.text-grey {
+.text-orange,.text-orange a{
+	color:#FC9F4D !important;
+}
+a.text-orange:hover,a.text-orange:focus,.text-orange a:hover,.text-orange a:focus {
+	color:#FFB371;
+}
+.text-grey,.text-grey a{
   color: #777 !important;
 }
-.text-primary {
+a.text-grey:hover,a.text-grey:focus,.text-grey a:hover,.text-grey a:focus {
+	color:#5C5C5C;
+}
+.text-primary,.text-primary a{
   color: #337ab7 !important;
 }
-a.text-primary:hover,a.text-primary:focus {
-  color: #286090 !important;
+a.text-primary:hover,a.text-primary:focus,.text-primary a:hover,.text-primary a:focus {
+  color: #286090;
 }
-.text-success {
+.text-success,.text-success a {
   color: #3c763d !important;
 }
-a.text-success:hover,a.text-success:focus {
-  color: #2b542c !important;
+a.text-success:hover,a.text-success:focus,.text-success a:hover,.text-success a:focus {
+  color: #2b542c;
 }
-.text-info {
+.text-info,.text-info a {
   color: #31708f !important;
 }
-a.text-info:hover,a.text-info:focus {
-  color: #245269 !important;
+a.text-info:hover,a.text-info:focus,.text-info a:hover,.text-info a:focus {
+  color: #245269;
 }
-.text-warning {
+.text-warning,.text-warning a {
   color: #8a6d3b !important;
 }
-a.text-warning:hover,a.text-warning:focus {
-  color: #66512c !important;
+a.text-warning:hover,a.text-warning:focus,.text-warning a:hover,.text-warning a:focus {
+  color: #66512c;
 }
-.text-danger {
+.text-danger,.text-danger a {
   color: #a94442 !important;
 }
-a.text-danger:hover,a.text-danger:focus {
-  color: #843534 !important;
+a.text-danger:hover,a.text-danger:focus,.text-danger a:hover,.text-danger a:focus {
+  color: #843534;
 }
 .without-margin{
 	margin:0 !important;
@@ -1255,6 +1264,7 @@ navicon.navicon-rotate{
 	-webkit-animation: naviconrotate 0.5s ease 1;
 	transform: rotate(90deg);
 	*/
+	transform-origin:center;
 	transform:rotate(90deg);
 }
 nav.navbar-fixed-top{
