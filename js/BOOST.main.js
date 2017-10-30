@@ -1,8 +1,7 @@
 ﻿/* BOOST Framework 1.0 Main JS FILE - If you want to change, please refer to the GPL open-source lisence
  * Powered by BlueAirTechGroup(www.xsyds.cn)
  */
-var loadingWrapperDeleted;
-loadingWrapperDeleted=false;
+var loadingWrapperDeleted = false;
 
 document.onreadystatechange = completeLoading;
 
@@ -77,7 +76,7 @@ function(e){
 	"use strict";
 	var ScreenWidth = parseInt(GetWindowWidth());
 	var ScreenHeight = parseInt(GetWindowHeight());
-	if(loadingWrapperDeleted==false){
+	if(!loadingWrapperDeleted){
 		$("body").append('<div id="LoadingWrapper" class="cover bg-white" style="background:#FFFFFF;color:#000000;position:fixed;top:0px;left:0px;width:100vw;height:100vh;z-index:9999;display:table;vertical-align:middle;"><div class="inner" style="display:table-cell"><p align="center"><div class="boost-animate-spinner"></div></p><p align="center">Powered by Boost Framework</p><!--[if lt IE 9]><p>对不起,本网页<b>不支持</b>您的浏览器, 请升级您的浏览器.</p><p>Sorry, this page does not support your current browser, to change this situation, you will need to update your browser</p><![endif]--></div></div>');
 	}
 	if(ScreenWidth<1201){
