@@ -1282,6 +1282,10 @@ nav .navbar-brand{
 	margin:0;
 	vertical-align:top;
 }
+nav .navbar-brand img{
+	height:50px;
+	width:50px;
+}
 nav .navbar-links{
 	font-size:0px;
 	display:inline-block;
