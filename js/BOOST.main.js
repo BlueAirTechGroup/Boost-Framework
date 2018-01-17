@@ -97,6 +97,22 @@ function(e){
 		MyLinks.toggle();
 	}
 	);
+	$(".navdropdown").hide();
+	$(".navdropdown").parent(".navbar-link").mousemove(function(e) {
+        if(parseInt(GetWindowWidth()) >= 1201){
+			$(this).children(".navdropdown").show();
+		}
+    });
+	$(".navdropdown").parent(".navbar-link").mouseleave(function(e) {
+		if(parseInt(GetWindowWidth()) >= 1201){
+			$(this).children(".navdropdown").hide();
+		}
+	});
+	$(".navdropdown").parent(".navbar-link").click(function(e) {
+		if(parseInt(GetWindowWidth()) <= 1200){
+			$(this).children(".navdropdown").toggle();
+		}
+	});
 }
 );
 $(window).resize(

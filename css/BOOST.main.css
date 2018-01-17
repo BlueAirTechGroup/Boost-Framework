@@ -1274,7 +1274,7 @@ nav.navbar-fixed-top{
 	position:fixed;
 	top:0px;
 	left:0px;
-	z-index:9999;
+	z-index:2;
 }
 nav .navbar-brand{
 	display:inline-block;
@@ -1318,6 +1318,11 @@ nav .navbar-link{
 	margin:0;
 	text-align:center;
 }
+@media (max-width:1200px){
+	nav .navbar-link{
+		padding:0;
+	}
+}
 nav .navbar-link a{
 	display:block;
 	height:50px;
@@ -1326,7 +1331,30 @@ nav .navbar-link a{
 	padding:0;
 	text-decoration:none;
 }
-
+nav .navbar-link div.navdropdown{
+	background:#FFFFFF;
+	color:#000000;
+}
+nav .navbar-link div.navdropdown a:hover{
+	background:DFDFDF;
+}
+@media (max-width:1200px){
+	nav .navbar-link div.navdropdown{
+		display:block;
+		height:auto;
+		width:100%;
+	}
+}
+@media (min-width:1201px){
+	nav .navbar-link div.navdropdown{
+		position:absolute;
+		z-index:3;
+		display:block;
+		margin-left:-15px;
+		height:auto;
+		width:auto;
+	}
+}
 nav .navbar-link.navbar-link-current{
 	font-weight:500;
 	background:#D1D1D1;
@@ -1344,10 +1372,17 @@ nav.navbar-black a{
 nav.navbar-black .navbar-link{
 	background:#000000;
 }
+nav.navbar-black .navbar-link div.navdropdown{
+	background:#000000;
+	color:#FFFFFF;
+}
 nav.navbar-black .navbar-link.navbar-link-current{
 	background:#4D4D4D;
 }
 nav.navbar-black .navbar-link:hover{
+	background:#5D5D5D;
+}
+nav.navbar-black .navbar-link a:hover{
 	background:#5D5D5D;
 }
 .navbar-hasbottomborder{
@@ -1364,8 +1399,6 @@ nav.navbar-black .navbar-link:hover{
 	}
 	nav .navbar-link{
 		height:auto;
-		padding-top:5px;
-		padding-bottom:5px;
 		width:auto;
 		display:block;
 		line-height:1;
@@ -1387,6 +1420,9 @@ nav.navbar-black .navbar-link:hover{
 		height:45px;
 		line-height:45px;
 	}
+	nav.navbar-hasbottomborder .navbar-link div.navdropdown{
+		margin-top:5px;
+	}
 	nav.navbar-hasbottomborder .navbar-link.navbar-link-current a::after{
 		content:"";
 		display:block;
@@ -1401,7 +1437,7 @@ nav.navbar-black .navbar-link:hover{
 		width:0;
 		background:#1796E7;
 	}
-	nav.navbar-hasbottomborder .navbar-link a:hover::after{
+	nav.navbar-hasbottomborder .navbar-link > a:hover::after{
 		animation-name: navwidthexpand;
 		animation-duration: 1s;
 		animation-iteration-count: 1; /*infinite */
