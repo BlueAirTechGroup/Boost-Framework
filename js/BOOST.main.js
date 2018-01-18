@@ -10,7 +10,7 @@ document.onreadystatechange = completeLoading;
 	var promptx = [];
 	var prompty = [];
 	var promptdraging = [];
-    var browser = function () {   
+var browser = function () {   
     var agent = navigator.userAgent.toLowerCase(),  
     opera = window.opera,  
     browser = {  
@@ -71,6 +71,18 @@ document.onreadystatechange = completeLoading;
     browser.version = version; 
     return browser;  
 }();
+function getGetReqObject() {
+   var url = location.search; //获取url中"?"符后的字串
+   var theRequest = new Object();
+   if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+   }
+   return theRequest;
+}
 $(window).ready(
 function(e){
 	"use strict";
