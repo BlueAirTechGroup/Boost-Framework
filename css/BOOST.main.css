@@ -1274,7 +1274,7 @@ nav.navbar-fixed-top{
 	position:fixed;
 	top:0px;
 	left:0px;
-	z-index:2;
+	z-index:3;
 }
 nav .navbar-brand{
 	display:inline-block;
@@ -1348,7 +1348,7 @@ nav .navbar-link div.navdropdown a:hover{
 @media (min-width:1201px){
 	nav .navbar-link div.navdropdown{
 		position:absolute;
-		z-index:3;
+		z-index:4;
 		display:block;
 		margin-left:-15px;
 		height:auto;
