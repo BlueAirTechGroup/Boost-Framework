@@ -87,7 +87,7 @@ function getGetReqObject() {
 //1是一天, 30是30天
 function setCookie(name,value,time = 1,secureCookie = false,cookiePath='/',cookieDomain = '') 
 {
-	if(domain == ''){
+	if(cookieDomain == ''){
 		Cookies.set(name,value,{expires: time, path: cookiePath, secure: secureCookie});
 	}else{
 		Cookies.set(name,value,{expires: time, path: cookiePath, domain: cookieDomain, secure: secureCookie});
@@ -97,9 +97,13 @@ function getCookie(name)
 {
     return Cookies.get(name);
 } 
-function delCookie(name)
+function delCookie(name, secureCookie = false, cookiePath = '/', cookieDomain = '')
 {
-    return Cookies.remove(name);
+	if(cookieDomain == ''){
+		return Cookies.remove(name,{path:cookiePath,secure:secureCookie});
+	}else{
+		return Cookies.remove(name,{path:cookiePath,secure:secureCookie,domain:cookieDomain});
+	}
 } 
 $(window).ready(
 function(e){
