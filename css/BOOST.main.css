@@ -1335,9 +1335,14 @@ nav .navbar-link div.navdropdown{
 	background:#FFFFFF;
 	color:#000000;
 }
-nav .navbar-link div.navdropdown a:hover{
-	background:DFDFDF;
+nav .navbar-link div.navdropdown a.navdropdownlink-current{
+	background:#D1D1D1;
+	font-weight:500;
 }
+nav .navbar-link div.navdropdown a:hover{
+	background:#DFDFDF;
+}
+
 @media (max-width:1200px){
 	nav .navbar-link div.navdropdown{
 		display:block;
@@ -1376,6 +1381,10 @@ nav.navbar-black .navbar-link div.navdropdown{
 	background:#000000;
 	color:#FFFFFF;
 }
+nav .navbar-link div.navdropdown a.navdropdownlink-current{
+	background:#4D4D4D;
+	font-weight:500;
+}
 nav.navbar-black .navbar-link.navbar-link-current{
 	background:#4D4D4D;
 }
@@ -1385,6 +1394,11 @@ nav.navbar-black .navbar-link:hover{
 nav.navbar-black .navbar-link a:hover{
 	background:#5D5D5D;
 }
+nav .navbar-link div.navdropdown a:hover{
+	background:#5D5D5D;
+}
+
+
 .navbar-hasbottomborder{
 	
 }
@@ -1423,14 +1437,14 @@ nav.navbar-black .navbar-link a:hover{
 	nav.navbar-hasbottomborder .navbar-link div.navdropdown{
 		margin-top:5px;
 	}
-	nav.navbar-hasbottomborder .navbar-link.navbar-link-current a::after{
+	nav.navbar-hasbottomborder .navbar-link.navbar-link-current > a::after{
 		content:"";
 		display:block;
 		height:5px;
 		width:100%;
 		background:#1796E7;
 	}
-	nav.navbar-hasbottomborder .navbar-link a::after{
+	nav.navbar-hasbottomborder .navbar-link > a::after{
 		content:"";
 		display:block;
 		height:5px;
@@ -1446,10 +1460,10 @@ nav.navbar-black .navbar-link a:hover{
 		-webkit-animation: navwidthexpand 1s ease 1;
 		width:100%;
 	}
-	nav.bottomborder-black .navbar-link.navbar-link-current a::after{
+	nav.bottomborder-black .navbar-link.navbar-link-current > a::after{
 		background:#000000;
 	}
-	nav.bottomborder-black .navbar-link a::after{
+	nav.bottomborder-black .navbar-link > a::after{
 		background:#000000;
 	}
 }
