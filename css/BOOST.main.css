@@ -560,7 +560,7 @@ body .col-as-base{
 }
 .col p, .row p{
 	line-height:1.2;
-	margin:0;
+	
 	padding:0;
 }
 @media (min-width:350px){
